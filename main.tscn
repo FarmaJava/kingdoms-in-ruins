@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://blo4k0p54jxa7"]
+
+[ext_resource type="Script" uid="uid://bwd6da0khupha" path="res://main.gd" id="1_7mycd"]
+[ext_resource type="Texture2D" uid="uid://bv4vslgy4htay" path="res://Terreno.png" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://ipk7geyn7tya" path="res://character_body_2d.gd" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://b6b4ylddwt06x" path="res://enemy.tscn" id="2_lquwl"]
+[ext_resource type="Texture2D" uid="uid://nqwht8caurya" path="res://Mago 32x32.png" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dkrfrg7ptcuif" path="res://bola de fuego.tscn" id="5_7mycd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42btv"]
+size = Vector2(23, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3cccd"]
+size = Vector2(25, 34)
+
+[node name="Main" type="Node2D" unique_id=1285902538]
+script = ExtResource("1_7mycd")
+enemy_scene = ExtResource("2_lquwl")
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1177247568]
+texture = ExtResource("1_h2yge")
+centered = false
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=917189370 groups=["player"]]
+position = Vector2(500, 500)
+script = ExtResource("2_1bvp3")
+fireball_scene = ExtResource("5_7mycd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1185711436]
+texture = ExtResource("3_lquwl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2053105404]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_42btv")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1757767348]
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Hurtbox" type="Area2D" parent="Player" unique_id=1707398330]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Hurtbox" unique_id=815576323]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_3cccd")
+debug_color = Color(0.9886978, 0, 0.30429786, 0.41960785)
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1140279288]
+wait_time = 2.0
+autostart = true

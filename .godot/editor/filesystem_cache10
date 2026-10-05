@@ -1,0 +1,16 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1791205231
+bola de fuego.png::CompressedTexture2D::375949288481529072::1790334372::1790334372::1::::<><><>0<>0<>706d4f1e3be99589c3d627d692074aec<>res://.godot/imported/bola de fuego.png-ac86b88d0bd29186fc3a745d8daa6c63.ctex::
+bola de fuego.tscn::PackedScene::7896579218019724677::1790682515::0::1::::<><><>0<>0<><>::uid://bc3rblmyd88hf::::res://bola_de_fuego.gd<>uid://fmd3hkulc2f1::::res://bola de fuego.png
+boladefuego.gd::GDScript::7309069105178292716::1790681742::0::1::::<>Area2D<><>0<>0<><>::
+bola_de_fuego.gd::GDScript::2585635520144073519::1790683866::0::1::::<>Area2D<><>0<>0<><>::
+character_body_2d.gd::GDScript::593141053176198604::1790683201::0::1::::<>CharacterBody2D<><>0<>0<><>::
+control.tscn::PackedScene::2936649722969594071::1790276776::0::1::::<><><>0<>0<><>::
+Enemigo.png::CompressedTexture2D::1671227710372883985::1790274897::1790274898::1::::<><><>0<>0<>a47242c3c3cb304bd7d41b8eafac59ae<>res://.godot/imported/Enemigo.png-a12482dcae7af6c82bea93530f5ae30c.ctex::
+enemy.gd::GDScript::2286881591589716367::1790681639::0::1::::<>CharacterBody2D<><>0<>0<><>::
+enemy.tscn::PackedScene::4566143448627856945::1790683866::0::1::::<><><>0<>0<><>::uid://7t1uugjica0n::::res://enemy.gd<>uid://x2s41575f1mj::::res://Enemigo.png
+icon.svg::CompressedTexture2D::6444615385911791348::1790261017::1790261023::1::::<><><>0<>0<>3cc59ce0b3bb85d92a3dc5236b997163<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+Mago 32x32.png::CompressedTexture2D::946834334771449748::1790267586::1790267587::1::::<><><>0<>0<>8f8b6ba4f972b739cc7ede030923b4ac<>res://.godot/imported/Mago 32x32.png-1cffd9341b3d38de7d6a68e7d190beeb.ctex::
+main.gd::GDScript::3938656000234090554::1790275983::0::1::::<>Node2D<><>0<>0<><>::
+main.tscn::PackedScene::3189179240655587220::1790683201::0::1::::<><><>0<>0<><>::uid://bwd6da0khupha::::res://main.gd<>uid://bv4vslgy4htay::::res://Terreno.png<>uid://ipk7geyn7tya::::res://character_body_2d.gd<>uid://b6b4ylddwt06x::::res://enemy.tscn<>uid://nqwht8caurya::::res://Mago 32x32.png<>uid://dkrfrg7ptcuif::::res://bola de fuego.tscn
+Terreno.png::CompressedTexture2D::3921561144253077612::1790267586::1790267587::1::::<><><>0<>0<>0a0e4c4d25f9f5acf4ab3d3e1ae9b031<>res://.godot/imported/Terreno.png-bbfdc58a833719e0fd2f6595a7e4edbc.ctex::
