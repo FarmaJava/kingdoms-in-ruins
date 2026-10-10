@@ -1,4 +1,5 @@
 extends CharacterBody2D
+signal health_changed(current: float, max: float)
 
 @export var speed: float = 200.0
 @export var map_rect: Rect2 = Rect2(0, 0, 1000, 1000)
@@ -16,10 +17,12 @@ var invulnerable_timer: float = 0.0
 
 @onready var camera: Camera2D = $Camera2D
 @onready var hurtbox: Area2D = $Hurtbox
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
 	add_to_group("player")
 	health = max_health
+	health_changed.emit(health, max_health)
 
 	camera.limit_left = int(map_rect.position.x)
 	camera.limit_top = int(map_rect.position.y)
@@ -34,6 +37,7 @@ func _physics_process(delta: float) -> void:
 	var dir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = dir * speed
 	move_and_slide()
+	_update_animation(dir)
 
 	global_position = global_position.clamp(
 		map_rect.position + Vector2(margin, margin),
@@ -43,6 +47,18 @@ func _physics_process(delta: float) -> void:
 	invulnerable_timer = max(invulnerable_timer - delta, 0.0)
 	if invulnerable_timer == 0.0:
 		_check_contact_damage()
+
+# ---------- Animación ----------
+
+func _update_animation(dir: Vector2) -> void:
+	if dir == Vector2.ZERO:
+		animated_sprite.pause()
+		return
+
+	if abs(dir.x) > abs(dir.y):
+		animated_sprite.play("walk_right" if dir.x > 0 else "walk_left")
+	else:
+		animated_sprite.play("walk_down" if dir.y > 0 else "walk_up")
 
 # ---------- Ataque ----------
 
@@ -63,11 +79,16 @@ func _check_contact_damage() -> void:
 func take_damage(amount: float) -> void:
 	health -= amount
 	invulnerable_timer = invulnerability_time
+	health_changed.emit(health, max_health)
 	print("Vida: ", health)
 
-	# parpadeo rojo para ver el golpe
-	$Sprite2D.modulate = Color.RED
-	create_tween().tween_property($Sprite2D, "modulate", Color.WHITE, 0.3)
+	animated_sprite.modulate = Color.RED
+	create_tween().tween_property(animated_sprite, "modulate", Color.WHITE, 0.3)
 
 	if health <= 0:
 		get_tree().reload_current_scene()  # provisorio, luego hacemos un game over
+		
+func increase_max_health(amount: float) -> void:
+	max_health += amount
+	health += amount  # opcional: también cura la diferencia al mejorar
+	health_changed.emit(health, max_health)

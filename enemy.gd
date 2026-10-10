@@ -7,6 +7,8 @@ extends CharacterBody2D
 var health: float
 var player: Node2D
 
+@onready var animated_sprite: AnimatedSprite2D = $Sprite2D
+
 func _ready() -> void:
 	health = max_health
 	add_to_group("enemies")
@@ -15,8 +17,16 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	if player == null:
 		return
-	velocity = global_position.direction_to(player.global_position) * speed
+	var dir := global_position.direction_to(player.global_position)
+	velocity = dir * speed
 	move_and_slide()
+	_update_animation(dir)
+
+func _update_animation(dir: Vector2) -> void:
+	if abs(dir.x) > abs(dir.y):
+		animated_sprite.play("walk_right" if dir.x > 0 else "walk_left")
+	else:
+		animated_sprite.play("walk_down" if dir.y > 0 else "walk_up")
 
 func take_damage(amount: float) -> void:
 	health -= amount
