@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://blo4k0p54jxa7"]
 
 [ext_resource type="Script" uid="uid://bwd6da0khupha" path="res://main.gd" id="1_7mycd"]
-[ext_resource type="Texture2D" uid="uid://bv4vslgy4htay" path="res://Terreno.png" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://ipk7geyn7tya" path="res://character_body_2d.gd" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://b6b4ylddwt06x" path="res://enemy.tscn" id="2_lquwl"]
+[ext_resource type="Texture2D" uid="uid://dr3t1hwixv75u" path="res://Fondo.png" id="3_ok6jj"]
 [ext_resource type="Texture2D" uid="uid://xs2mdormffa0" path="res://Animaciones/down/pixil-frame-0.png" id="4_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://j51e0v025ec" path="res://Animaciones/down/pixil-frame-1.png" id="5_0rl1p"]
 [ext_resource type="PackedScene" uid="uid://dkrfrg7ptcuif" path="res://bola de fuego.tscn" id="5_7mycd"]
@@ -161,7 +161,8 @@ script = ExtResource("1_7mycd")
 enemy_scene = ExtResource("2_lquwl")
 
 [node name="Fondo" type="Sprite2D" parent="." unique_id=1177247568]
-texture = ExtResource("1_h2yge")
+position = Vector2(146, 252)
+texture = ExtResource("3_ok6jj")
 centered = false
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=538047156 groups=["player"]]
