@@ -1,12 +1,10 @@
-[gd_scene format=3 uid="uid://blo4k0p54jxa7"]
+[gd_scene format=3 uid="uid://bkqlv6xhr86wb"]
 
-[ext_resource type="Script" uid="uid://bwd6da0khupha" path="res://main.gd" id="1_7mycd"]
-[ext_resource type="Texture2D" uid="uid://bv4vslgy4htay" path="res://Terreno.png" id="1_h2yge"]
-[ext_resource type="Script" uid="uid://ipk7geyn7tya" path="res://character_body_2d.gd" id="2_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://b6b4ylddwt06x" path="res://enemy.tscn" id="2_lquwl"]
+[ext_resource type="Script" uid="uid://co61avl63mvm" path="res://gd/main.gd" id="1_4k2k6"]
+[ext_resource type="Texture2D" path="res://Terreno.png" id="1_h2yge"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://xs2mdormffa0" path="res://Animaciones/down/pixil-frame-0.png" id="4_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://j51e0v025ec" path="res://Animaciones/down/pixil-frame-1.png" id="5_0rl1p"]
-[ext_resource type="PackedScene" uid="uid://dkrfrg7ptcuif" path="res://bola de fuego.tscn" id="5_7mycd"]
 [ext_resource type="Texture2D" uid="uid://0ch2opd13dxu" path="res://Animaciones/down/pixil-frame-2.png" id="6_ok6jj"]
 [ext_resource type="Texture2D" uid="uid://cxkhmobtb5guc" path="res://Animaciones/down/pixil-frame-3.png" id="7_facbu"]
 [ext_resource type="Texture2D" uid="uid://v6vc4cfpb82l" path="res://Animaciones/down/pixil-frame-4.png" id="8_b1qrp"]
@@ -35,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://nxqwnsawmjlh" path="res://Animaciones/up/pixil-frame-6.png" id="31_rm4vd"]
 [ext_resource type="Texture2D" uid="uid://dr8flimrgaqxb" path="res://Animaciones/up/pixil-frame-7.png" id="32_pjyto"]
 [ext_resource type="Texture2D" uid="uid://djifb8doiylht" path="res://Animaciones/up/Progress_bar.png" id="35_0rl1p"]
-[ext_resource type="Script" uid="uid://b63hb5qm42yyg" path="res://Progress_bar.gd" id="36_ok6jj"]
+[ext_resource type="Script" path="res://Progress_bar.gd" id="36_ok6jj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7mycd"]
 animations = [{
@@ -157,8 +155,7 @@ size = Vector2(29.333328, 29.333344)
 load_path = "res://.godot/imported/Barra de vida.png-13a68cf0bf59289d92de4c83539ca700.ctex"
 
 [node name="Main" type="Node2D" unique_id=1285902538]
-script = ExtResource("1_7mycd")
-enemy_scene = ExtResource("2_lquwl")
+script = ExtResource("1_4k2k6")
 
 [node name="Fondo" type="Sprite2D" parent="." unique_id=1177247568]
 texture = ExtResource("1_h2yge")
@@ -168,7 +165,6 @@ centered = false
 position = Vector2(506.25, 493.75)
 scale = Vector2(1.5000002, 1.5000007)
 script = ExtResource("2_1bvp3")
-fireball_scene = ExtResource("5_7mycd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1078474622]
 sprite_frames = SubResource("SpriteFrames_7mycd")

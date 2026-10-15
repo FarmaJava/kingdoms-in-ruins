@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://b6b4ylddwt06x"]
+[gd_scene format=3 uid="uid://v4psevms400f"]
 
-[ext_resource type="Script" uid="uid://7t1uugjica0n" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="Script" path="res://enemy.gd" id="1_4gyqm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_42btv"]
 

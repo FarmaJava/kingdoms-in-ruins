@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dkrfrg7ptcuif"]
+
+[ext_resource type="Script" uid="uid://bc3rblmyd88hf" path="res://bola_de_fuego.gd" id="1_122mg"]
+[ext_resource type="Texture2D" uid="uid://fmd3hkulc2f1" path="res://bola de fuego.png" id="1_nhqut"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_42btv"]
+radius = 14.0
+
+[node name="Area2D" type="Area2D" unique_id=1248499292]
+script = ExtResource("1_122mg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1127411548]
+texture = ExtResource("1_nhqut")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1286196975]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_42btv")

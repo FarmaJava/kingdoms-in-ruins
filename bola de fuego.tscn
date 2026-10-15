@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://dkrfrg7ptcuif"]
+[gd_scene format=3 uid="uid://cjigalkii4a2r"]
 
-[ext_resource type="Script" uid="uid://bc3rblmyd88hf" path="res://bola_de_fuego.gd" id="1_122mg"]
-[ext_resource type="Texture2D" uid="uid://fmd3hkulc2f1" path="res://bola de fuego.png" id="1_nhqut"]
+[ext_resource type="Script" path="res://bola_de_fuego.gd" id="1_122mg"]
+[ext_resource type="Texture2D" path="res://bola de fuego.png" id="1_nhqut"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_42btv"]
 radius = 14.0
