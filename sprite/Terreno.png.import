@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fmd3hkulc2f1"
-path="res://.godot/imported/bola de fuego.png-ac86b88d0bd29186fc3a745d8daa6c63.ctex"
+uid="uid://dhs6o66ggbs3v"
+path="res://.godot/imported/Terreno.png-88bd0ba3696d404d2e55ecb9a38d257f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bola de fuego.png"
-dest_files=["res://.godot/imported/bola de fuego.png-ac86b88d0bd29186fc3a745d8daa6c63.ctex"]
+source_file="res://sprite/Terreno.png"
+dest_files=["res://.godot/imported/Terreno.png-88bd0ba3696d404d2e55ecb9a38d257f.ctex"]
 
 [params]
 
