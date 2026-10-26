@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bgwno0j8msyb"]
+
+[ext_resource type="Script" uid="uid://c52nl17m0rgbh" path="res://gd/creditos.gd" id="1_wi4ku"]
+
+[node name="Creditos" type="Control" unique_id=1529362925]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wi4ku")
+
+[node name="BackButton" type="Button" parent="." unique_id=1658823649]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 24.0
+offset_right = 85.0
+offset_bottom = 55.0
+text = "volver"

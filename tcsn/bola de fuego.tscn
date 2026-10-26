@@ -1,16 +1,108 @@
 [gd_scene format=3 uid="uid://dkrfrg7ptcuif"]
 
-[ext_resource type="Script" uid="uid://bc3rblmyd88hf" path="res://bola_de_fuego.gd" id="1_122mg"]
-[ext_resource type="Texture2D" uid="uid://fmd3hkulc2f1" path="res://bola de fuego.png" id="1_nhqut"]
+[ext_resource type="Script" uid="uid://bpre3x6m0pyk2" path="res://gd/bola_de_fuego.gd" id="1_122mg"]
+[ext_resource type="Texture2D" uid="uid://x1615mplk5qa" path="res://Animaciones/Bola de fuego/Bola_1.png" id="2_cnabb"]
+[ext_resource type="Texture2D" uid="uid://60f31ap52ehn" path="res://Animaciones/Bola de fuego/Bola_2.png" id="3_xmoo8"]
+[ext_resource type="Texture2D" uid="uid://blgikp553qd27" path="res://Animaciones/Bola de fuego/Bola_3.png" id="4_1oh4g"]
+[ext_resource type="Texture2D" uid="uid://cicw5hchq1eda" path="res://Animaciones/Bola de fuego/Bola_4.png" id="5_t7fr1"]
+[ext_resource type="Texture2D" uid="uid://glgmeunqqicj" path="res://Animaciones/Bola de fuego/Bola_5.png" id="6_wxnw5"]
+[ext_resource type="Texture2D" uid="uid://dwh735cqwak24" path="res://Animaciones/Bola de fuego/Bola_6.png" id="7_0nnc0"]
+[ext_resource type="Texture2D" uid="uid://bj0deikrddm3a" path="res://Animaciones/Bola de fuego/Bola_7.png" id="8_laad8"]
+[ext_resource type="Texture2D" uid="uid://85ehqtb37ajq" path="res://Animaciones/Bola de fuego/Bola_8.png" id="9_yilxc"]
+[ext_resource type="Texture2D" uid="uid://bu6mfvuuey5a7" path="res://Animaciones/Bola de fuego/Bola_9.png" id="10_8ya5v"]
+[ext_resource type="Texture2D" uid="uid://du3jgefkq6f8b" path="res://Animaciones/Bola de fuego destroy/Bola_0.png" id="11_fyxk6"]
+[ext_resource type="Texture2D" uid="uid://ron2v12jyjnb" path="res://Animaciones/Bola de fuego destroy/Bola_1.png" id="12_a743u"]
+[ext_resource type="Texture2D" uid="uid://dx35705681jy4" path="res://Animaciones/Bola de fuego destroy/Bola_2.png" id="13_4g1sh"]
+[ext_resource type="Texture2D" uid="uid://cys1m2v0e32vx" path="res://Animaciones/Bola de fuego destroy/Bola_3.png" id="14_8w138"]
+[ext_resource type="Texture2D" uid="uid://b4lunklv7jug3" path="res://Animaciones/Bola de fuego destroy/Bola_4.png" id="15_70svm"]
+[ext_resource type="Texture2D" uid="uid://3waqmaxb7cbt" path="res://Animaciones/Bola de fuego destroy/Bola_5.png" id="16_jjglf"]
+[ext_resource type="Texture2D" uid="uid://cay6teed7imy0" path="res://Animaciones/Bola de fuego destroy/Bola_6.png" id="17_ro8xl"]
+[ext_resource type="Texture2D" uid="uid://c2ur5hkienl41" path="res://Animaciones/Bola de fuego destroy/Bola_7.png" id="18_1enn0"]
+[ext_resource type="Texture2D" uid="uid://cvw6jbds2katk" path="res://Animaciones/Bola de fuego destroy/Bola_8.png" id="19_qvl57"]
+[ext_resource type="Texture2D" uid="uid://bcay3w7vlik8x" path="res://Animaciones/Bola de fuego destroy/Bola_9.png" id="20_8s6nr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_42btv"]
+animations = [{
+"frames": [{
+"duration": 0.01,
+"texture": ExtResource("2_cnabb")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_xmoo8")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_1oh4g")
+}, {
+"duration": 0.5,
+"texture": ExtResource("5_t7fr1")
+}, {
+"duration": 0.5,
+"texture": ExtResource("6_wxnw5")
+}, {
+"duration": 0.5,
+"texture": ExtResource("7_0nnc0")
+}, {
+"duration": 0.5,
+"texture": ExtResource("8_laad8")
+}, {
+"duration": 0.5,
+"texture": ExtResource("9_yilxc")
+}, {
+"duration": 0.5,
+"texture": ExtResource("10_8ya5v")
+}],
+"loop": 1,
+"name": &"fly",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 0.11,
+"texture": ExtResource("11_fyxk6")
+}, {
+"duration": 0.11,
+"texture": ExtResource("12_a743u")
+}, {
+"duration": 0.11,
+"texture": ExtResource("13_4g1sh")
+}, {
+"duration": 0.11,
+"texture": ExtResource("14_8w138")
+}, {
+"duration": 0.11,
+"texture": ExtResource("15_70svm")
+}, {
+"duration": 0.11,
+"texture": ExtResource("16_jjglf")
+}, {
+"duration": 0.11,
+"texture": ExtResource("17_ro8xl")
+}, {
+"duration": 0.11,
+"texture": ExtResource("18_1enn0")
+}, {
+"duration": 0.11,
+"texture": ExtResource("19_qvl57")
+}, {
+"duration": 0.2,
+"texture": ExtResource("20_8s6nr")
+}],
+"loop": 0,
+"name": &"impact",
+"speed": 6.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_42btv"]
 radius = 14.0
 
 [node name="Area2D" type="Area2D" unique_id=1248499292]
 script = ExtResource("1_122mg")
+max_range = 50.0
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1127411548]
-texture = ExtResource("1_nhqut")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=254907927]
+sprite_frames = SubResource("SpriteFrames_42btv")
+animation = &"impact"
+frame = 9
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1286196975]
 position = Vector2(1, 0)

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ca3qh8jra266b"]
+
+[ext_resource type="Script" uid="uid://ddpvnwetmyaj4" path="res://gd/rock_small.gd" id="1_07nq1"]
+[ext_resource type="Texture2D" uid="uid://dix2aaxv3cbea" path="res://sprite/spritesheet_decoracion_32x32.png" id="1_fi7v3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y5gyv"]
+size = Vector2(34, 14)
+
+[node name="Rock_small" type="StaticBody2D" unique_id=522939073]
+script = ExtResource("1_07nq1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1611626592]
+scale = Vector2(2, 2)
+texture = ExtResource("1_fi7v3")
+region_enabled = true
+region_rect = Rect2(68, 0, 25, 27)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=267063603]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_y5gyv")

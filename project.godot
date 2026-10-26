@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="Kingdoms in Ruins"
-run/main_scene="uid://blo4k0p54jxa7"
+run/main_scene="uid://bntourb1gnrxl"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=720
-window/size/viewport_height=480
+window/size/viewport_width=1000
+window/size/viewport_height=600
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

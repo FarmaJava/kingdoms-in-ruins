@@ -1,1 +1,7 @@
-res://main.tscn
+res://tcsn/main.tscn
+res://gd/character_body_2d.gd
+res://gd/enemy.gd
+res://tcsn/stats_hud.gd
+res://tcsn/game_over_panel.gd
+res://tcsn/game_over_panel.tscn
+res://game_over_panel.gd

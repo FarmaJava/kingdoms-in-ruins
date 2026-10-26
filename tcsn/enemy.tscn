@@ -1,18 +1,129 @@
 [gd_scene format=3 uid="uid://b6b4ylddwt06x"]
 
-[ext_resource type="Script" uid="uid://7t1uugjica0n" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="Script" uid="uid://ch22fcaav582" path="res://gd/enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://0yd6wcs77n8o" path="res://Animaciones/w Enemy Orco 1/Down/sprite_00.png" id="2_fgc01"]
+[ext_resource type="Texture2D" uid="uid://daas54texwy1d" path="res://Animaciones/w Enemy Orco 1/Down/sprite_01.png" id="3_pkt4o"]
+[ext_resource type="Texture2D" uid="uid://btdehcjyyaii7" path="res://Animaciones/w Enemy Orco 1/Down/sprite_02.png" id="4_h2jyw"]
+[ext_resource type="Texture2D" uid="uid://dm3vcdfn5wb10" path="res://Animaciones/w Enemy Orco 1/Left/sprite_03.png" id="5_wf361"]
+[ext_resource type="Texture2D" uid="uid://1kl1dtrxdg0f" path="res://Animaciones/w Enemy Orco 1/Left/sprite_04.png" id="6_awnwb"]
+[ext_resource type="Texture2D" uid="uid://bit7oj4ghc4qa" path="res://Animaciones/w Enemy Orco 1/Left/sprite_05.png" id="7_xxlj0"]
+[ext_resource type="Texture2D" uid="uid://bl51dl0tqmayt" path="res://Animaciones/w Enemy Orco 1/Right/sprite_06.png" id="8_yfetp"]
+[ext_resource type="Texture2D" uid="uid://crmpqi61ivfry" path="res://Animaciones/w Enemy Orco 1/Right/sprite_07.png" id="9_gm2pt"]
+[ext_resource type="Texture2D" uid="uid://c5wl2x3rf4vaa" path="res://Animaciones/w Enemy Orco 1/Right/sprite_08.png" id="10_oupfu"]
+[ext_resource type="Texture2D" uid="uid://bypmrxfilcg3g" path="res://Animaciones/w Enemy Orco 1/Up/sprite_10.png" id="11_7s4uy"]
+[ext_resource type="Texture2D" uid="uid://cftqlvc3avpha" path="res://Animaciones/w Enemy Orco 1/Up/sprite_11.png" id="12_jv7cc"]
+[ext_resource type="Texture2D" uid="uid://c51nw68ruach6" path="res://Animaciones/w Enemy Orco 1/Up/sprite_12.png" id="13_f8nk1"]
+[ext_resource type="Texture2D" uid="uid://j3h7xfjybjpx" path="res://Animaciones/w Enemy Orco 1/attack/sprite_05.png" id="14_awnwb"]
+[ext_resource type="Texture2D" uid="uid://ps3761wmuokh" path="res://Animaciones/w Enemy Orco 1/attack/sprite_06.png" id="15_xxlj0"]
+[ext_resource type="Texture2D" uid="uid://vf607rsmhl7u" path="res://Animaciones/w Enemy Orco 1/attack/sprite_07.png" id="16_yfetp"]
+[ext_resource type="Texture2D" uid="uid://c2t7dj5xio6wd" path="res://Animaciones/w Enemy Orco 1/attack/sprite_08.png" id="17_gm2pt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_42btv"]
+animations = [{
+"frames": [{
+"duration": 0.8,
+"texture": ExtResource("2_fgc01")
+}, {
+"duration": 0.8,
+"texture": ExtResource("3_pkt4o")
+}, {
+"duration": 0.8,
+"texture": ExtResource("4_h2jyw")
+}],
+"loop": 1,
+"name": &"Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.8,
+"texture": ExtResource("5_wf361")
+}, {
+"duration": 0.8,
+"texture": ExtResource("6_awnwb")
+}, {
+"duration": 0.8,
+"texture": ExtResource("7_xxlj0")
+}],
+"loop": 1,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.9,
+"texture": ExtResource("8_yfetp")
+}, {
+"duration": 0.9,
+"texture": ExtResource("9_gm2pt")
+}, {
+"duration": 0.9,
+"texture": ExtResource("10_oupfu")
+}],
+"loop": 1,
+"name": &"Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.8,
+"texture": ExtResource("11_7s4uy")
+}, {
+"duration": 0.8,
+"texture": ExtResource("12_jv7cc")
+}, {
+"duration": 0.8,
+"texture": ExtResource("13_f8nk1")
+}],
+"loop": 1,
+"name": &"Up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.8,
+"texture": ExtResource("14_awnwb")
+}, {
+"duration": 0.8,
+"texture": ExtResource("15_xxlj0")
+}, {
+"duration": 0.8,
+"texture": ExtResource("16_yfetp")
+}, {
+"duration": 0.8,
+"texture": ExtResource("17_gm2pt")
+}],
+"loop": 1,
+"name": &"attack_down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"attack_left",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"attack_right",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"attack_up",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iifgy"]
-size = Vector2(23, 31)
+size = Vector2(25, 36)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=362181535]
+z_index = -1
 script = ExtResource("1_4gyqm")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=703122342]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=703122342]
+z_index = -1
+position = Vector2(2.3841858e-07, -2.3841858e-07)
+scale = Vector2(1.09525, 1.21875)
 sprite_frames = SubResource("SpriteFrames_42btv")
+animation = &"attack_down"
+frame_progress = 0.019798683
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=505013049]
-position = Vector2(0.5, 0.5)
+position = Vector2(0.5, 3)
 shape = SubResource("RectangleShape2D_iifgy")

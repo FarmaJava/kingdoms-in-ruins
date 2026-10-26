@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bntourb1gnrxl"]
+
+[ext_resource type="Script" uid="uid://eoev5tt6ku5r" path="res://gd/main_menu.gd" id="1_b4rmr"]
+
+[node name="MainMenu" type="Control" unique_id=70867798]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b4rmr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1828608818]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 179.0
+offset_right = 695.0
+offset_bottom = 399.0
+pivot_offset = Vector2(175, 110)
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=12349350]
+layout_mode = 2
+text = "JUGAR"
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer" unique_id=483085729]
+layout_mode = 2
+text = "AJUSTES"
+
+[node name="CreditsButton" type="Button" parent="VBoxContainer" unique_id=2042160507]
+layout_mode = 2
+text = "CREDITOS
+"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=1250962457]
+layout_mode = 2
+text = "SALIR"
